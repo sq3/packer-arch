@@ -27,8 +27,9 @@ Usage
 
 ### VirtualBox Provider
 
-Assuming that you already have Packer,
-[VirtualBox](https://www.virtualbox.org/), and Vagrant installed, you
+Assuming that you already have [Packer](https://www.packer.io/),
+[VirtualBox](https://www.virtualbox.org/), and
+[Vagrant](https://www.vagrantup.com) installed, you
 should be good to clone this repo and go:
 
     $ git clone https://github.com/sq3/packer-arch.git
