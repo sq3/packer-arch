@@ -2,10 +2,10 @@
 
 DISK='/dev/sda'
 FQDN='vagrant-arch.vagrantup.com'
-KEYMAP='us'
+KEYMAP='de'
 LANGUAGE='en_US.UTF-8'
 PASSWORD=$(/usr/bin/openssl passwd -crypt 'vagrant')
-TIMEZONE='UTC'
+TIMEZONE='Europe/Berlin'
 
 CONFIG_SCRIPT='/usr/local/bin/arch-config.sh'
 ROOT_PARTITION="${DISK}1"
@@ -29,6 +29,10 @@ echo '==> creating /root filesystem (ext4)'
 
 echo "==> mounting ${ROOT_PARTITION} to ${TARGET_DIR}"
 /usr/bin/mount -o noatime,errors=remount-ro ${ROOT_PARTITION} ${TARGET_DIR}
+
+echo '==> force arch mirror of hs-esslingen'
+echo 'Server = http://ftp-stud.hs-esslingen.de/pub/Mirrors/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist
+pacman -Syy
 
 echo '==> bootstrapping the base installation'
 /usr/bin/pacstrap ${TARGET_DIR} base base-devel
