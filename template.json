@@ -46,7 +46,7 @@
     "post-processors": [
         {
             "type": "vagrant",
-            "output": "builds/arch_{{ .Provider }}.box"
+            "output": "arch-{{ .Provider }}.box"
         }
     ]
 }
