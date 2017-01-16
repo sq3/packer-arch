@@ -1,6 +1,6 @@
 {
     "variables": {
-        "iso_url": "https://ftp-stud.hs-esslingen.de/pub/Mirrors/archlinux/iso/latest/archlinux-2016.05.01-dual.iso",
+        "iso_url": "https://ftp-stud.hs-esslingen.de/pub/Mirrors/archlinux/iso/latest/archlinux-2017.01.01-dual.iso",
         "iso_checksum_url": "https://ftp-stud.hs-esslingen.de/pub/Mirrors/archlinux/iso/latest/sha1sums.txt",
         "iso_checksum_type": "sha1",
         "ssh_timeout": "20m"
