@@ -40,7 +40,9 @@ Then you can import the generated box into Vagrant:
 
     $ vagrant box add arch builds/_arch_virtualbox.box
 
-
+You can run update-iso-url.py to get the URL of the latest ArchLinux
+.iso verion to template.json. It automatically adds, commits and pushs
+the changes for continuous integration e.g. via travis
 License
 -------
 
