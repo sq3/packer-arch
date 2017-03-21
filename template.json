@@ -42,16 +42,9 @@
         }
     ],
     "post-processors": [
-         {
-            "type": "atlas",
-            "only": ["virtualbox-iso"],
-            "artifact": "sq3/archlinux",
-            "artifact_type": "vagrant.box",
-            "metadata": {
-              "provider": "virtualbox",
-              "version": "{{ user `version` }}",
-              "created_at": "{{timestamp}}"
-            }
-         }
+        {
+            "type": "vagrant",
+            "output": "arch-{{ .Provider }}.box"
+        }
     ]
 }
